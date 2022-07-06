@@ -1,0 +1,283 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    border: solid black 1px;
+}
+
+.hero {
+    background-color: #1c1d25;
+    height: 100vh;
+    color: white;
+    font-size: 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #26253a;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    width: 500px;
+    justify-content: space-around;
+    font-size: 30px;
+}
+
+ul.show {
+    display: block;
+}
+
+li {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 90px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 50px;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.hero-container {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-text {
+    margin-left: 80px;
+    margin-bottom: 200px;
+}
+
+.customButton {
+    width: 200px;
+    height: 50px;
+    background-color: coral;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 30px;
+    cursor: pointer;
+    user-select: none;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+.customButton span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+}
+.customButton svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+}
+.customButton:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+@keyframes fly-1 {
+    from {
+        transform: translateY(0.1em);
+    }
+
+    to {
+        transform: translateY(-0.1em);
+    }
+}
+@keyframes fly-2 {
+    from {
+        transform: translateY(0.2rem);
+    }
+
+    to {
+        transform: translateY(-0.2rem);
+    }
+}
+.customButton:hover svg {
+    transform: translateX(2.5em) rotate(45deg) scale(1.1);
+}
+.customButton:hover span {
+    transform: translateX(6em);
+}
+
+.customButton:hover {
+    background-color: #E04D01;
+}
+
+.customButton:active {
+    background-color: #A9A9A9;
+    color: #808080;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 200px;
+}
+
+.social-logo {
+    margin: 20px;
+}
+
+.sub-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px;
+    height: 85vh;
+    background-color: #26253a;
+    color: white;
+    text-shadow: 3px 3px black;
+}
+
+.skills {
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.skill-row {
+    display: flex;
+    justify-content: space-around;
+    height: 150px;
+}
+
+@keyframes hover {
+    from {
+        transform: translate(0px, 0px) scale(1);
+    }
+    to {
+        transform: translate(0px, 0px) scale(1.2);
+    }
+}
+@keyframes hoverout {
+    from {
+        transform: translate(0px, 0px) scale(1.2);
+    }
+    to {
+        transform: translate(0px, 0px) scale(1);
+    }
+}
+
+.skill-logo {
+    animation: hoverout 1s;
+    animation-fill-mode: forwards;
+}
+
+.skill-logo:hover{
+    animation: hover 0.6s;
+    animation-fill-mode: forwards;
+}
+.skill-logo:hover .tooltip {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+.tooltip {
+    opacity: 0;
+    transition: opacity 0.9s ease-out;
+    padding: 2px 5px;
+    position: absolute;
+    background-color: coral;
+    border-radius: 6px;
+    text-align: center;
+    text-shadow: 1px 1px black;
+}
+
+.sub-section2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px;
+    height: 90vh;
+    background-color: #1c1d25;
+    color: white;
+    text-shadow: 3px 3px black;
+}
+
+.project-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.project-card {
+    width: 300px;
+    height: 200px;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.8),
+                -15px -15px 30px rgba(0, 0, 0, 0.8);
+    transition: all 1s;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(360deg, #edededc5 45%, hsla(0, 0%, 13%, 1) 60%);
+}
+.project-card:hover {
+    height: 540px;
+    background: linear-gradient(360deg, #edededc5 50%, hsla(0, 0%, 13%, 1) 60%);
+}
+.project-card .card-header {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #212121;
+    padding: 40px 0 40px 0;
+    transition: all 1s;
+}
+.card-body {
+    display: block;
+    text-align: justify;
+    margin: 0 40px;
+}
+.card-img {
+    width: 40%;
+}
+.card-link {
+    text-shadow: 1px 1px black;
+    cursor: pointer;
+}
+.card-link:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 80px;
+    height: 50vh;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+@media only screen and (max-width:1000px) {
+    .project-grid {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
