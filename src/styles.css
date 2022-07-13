@@ -10,47 +10,43 @@ section {
 .hero {
     background-color: #1c1d25;
     height: 100vh;
+    width: auto;
     color: white;
-    font-size: 40px;
+    background-image: url("images/bg0.svg");
+    background-size: cover;
 }
 
-nav {
+.hline {
+    position: absolute;
+    background-color: white;
+    width: 3px;
+    height: 15%;
+    margin-left: 10%;
+}
+.hline-bot {
+    background-color: white;
+    width: 3px;
+    height: 35%;
+    margin-left: 10%;
+    margin-top: -15%;
+}
+
+.sections {
     display: flex;
-    justify-content: space-between;
-    background-color: #26253a;
-}
-
-ul {
-    display: flex;
-    list-style-type: none;
-    width: 500px;
-    justify-content: space-around;
-    font-size: 30px;
-}
-
-ul.show {
-    display: block;
-}
-
-li {
-    text-decoration: none;
+    flex-direction: column;
+    gap: 3vh;
+    margin-bottom: 10vh;
+    text-align: end;
 }
 
 h1 {
-    font-size: 90px;
+    font-size: 75px;
     margin: 0;
 }
 
 h2 {
-    font-size: 50px;
+    font-size: 40px;
     margin: 0;
-}
-
-p {
-    margin: 0;
-    margin-top: 40px;
-    font-size: 30px;
-    font-weight: 500;
 }
 
 .hero-container {
@@ -60,8 +56,14 @@ p {
     align-items: center;
 }
 
+.right-hero {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5vw;
+}
+
 .hero-text {
-    margin-left: 80px;
+    margin-left: 8vw;
     margin-bottom: 200px;
 }
 
@@ -131,27 +133,30 @@ p {
 
 .socials {
     display: flex;
-    flex-direction: column;
     gap: 20px;
-    padding-bottom: 200px;
+    margin-bottom: 40vh;
+    margin-left: 3vw;
 }
 
 .social-logo {
     margin: 20px;
 }
 
-.sub-section {
+.skills-section {
     display: flex;
-    justify-content: space-between;
-    padding: 80px;
+    flex-direction: column;
+    gap: 20px;
     height: 85vh;
-    background-color: #26253a;
-    color: white;
-    text-shadow: 3px 3px black;
+    padding: 7.5vh 0;
+    color: #111111;
+    text-shadow: 1px 0 rgb(194, 194, 194), -1px 0 rgb(194, 194, 194), 0 1px rgb(194, 194, 194), 0 -1px rgb(194, 194, 194),
+               1px 1px rgb(194, 194, 194), -1px -1px rgb(194, 194, 194), 1px -1px rgb(194, 194, 194), -1px 1px rgb(194, 194, 194);
+    background-image: url("images/bg1.svg");
+    background-size: cover;
 }
 
 .skills {
-    height: 55vh;
+    height: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -194,6 +199,7 @@ p {
     transition: opacity 0.5s ease-in;
 }
 .tooltip {
+    color: white;
     opacity: 0;
     transition: opacity 0.9s ease-out;
     padding: 2px 5px;
@@ -204,70 +210,88 @@ p {
     text-shadow: 1px 1px black;
 }
 
-.sub-section2 {
+.projects-section {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    padding: 80px;
+    padding: 5vh 0;
     height: 90vh;
-    background-color: #1c1d25;
-    color: white;
-    text-shadow: 3px 3px black;
+    color: #131314;
+    text-shadow: 1px 0 rgb(194, 194, 194), -1px 0 rgb(194, 194, 194), 0 1px rgb(194, 194, 194), 0 -1px rgb(194, 194, 194),
+               1px 1px rgb(194, 194, 194), -1px -1px rgb(194, 194, 194), 1px -1px rgb(194, 194, 194), -1px 1px rgb(194, 194, 194);
+    background-image: url("images/bg2.svg");
+    background-size: cover;
 }
 
-.project-grid {
+.project-container {
     display: flex;
     justify-content: space-around;
     margin-top: 50px;
 }
 
 .project-card {
-    width: 300px;
-    height: 200px;
-    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.8),
-                -15px -15px 30px rgba(0, 0, 0, 0.8);
-    transition: all 1s;
-    border-radius: 5px;
-    text-align: center;
-    overflow: hidden;
-    background: linear-gradient(360deg, #edededc5 45%, hsla(0, 0%, 13%, 1) 60%);
-}
-.project-card:hover {
-    height: 540px;
-    background: linear-gradient(360deg, #edededc5 50%, hsla(0, 0%, 13%, 1) 60%);
-}
-.project-card .card-header {
-    padding: 20px;
+    position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    background: #212121;
-    padding: 40px 0 40px 0;
-    transition: all 1s;
+    background-image: url("images/cardbg.png");
+    background-size: cover;
+    background-color: #C6C4C6;
+    height: 31vh;
+    width: 19vw;
+    box-shadow: -40px 40px 0 -3px #141414, -40px 40px white,
+        -80px 80px 0 -3px #141414, -80px 80px white;
 }
-.card-body {
-    display: block;
-    text-align: justify;
-    margin: 0 40px;
+.card-buttons {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    height: 6%;
+    width: 100%;
+}
+.card-button {
+    height: 100%;
+    width: 12%;
 }
 .card-img {
-    width: 40%;
-}
-.card-link {
-    text-shadow: 1px 1px black;
-    cursor: pointer;
-}
-.card-link:hover {
-    text-decoration: underline;
+    margin: auto;
+    height: 50%;
 }
 
-footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 80px;
-    height: 50vh;
+.project-text {
+}
+
+.about-section {
+    padding: 10vh 0;
+    height: 80vh;
+    color: #131314;
+    text-shadow: 1px 0 rgb(194, 194, 194), -1px 0 rgb(194, 194, 194), 0 1px rgb(194, 194, 194), 0 -1px rgb(194, 194, 194),
+               1px 1px rgb(194, 194, 194), -1px -1px rgb(194, 194, 194), 1px -1px rgb(194, 194, 194), -1px 1px rgb(194, 194, 194);
+    background-image: url("images/bg3.svg");
+    background-size: cover;
+}
+
+p {
+    padding: 0 2vw;
+    font-size: 30px;
+    font-weight: 300;
+    color: rgb(194, 194, 194);
+    text-shadow: none;
+}
+
+.about-bottom {
+    display: flex;
+    align-items: center;
+    margin-top: 40vh;
+}
+.lline {
+    background-color: white;
+    height: 3px;
+    width: 8vw;
+}
+.rline {
+    background-color: white;
+    height: 3px;
+    width: 70vw;
 }
 
 a {

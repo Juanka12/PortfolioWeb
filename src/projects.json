@@ -1,0 +1,12 @@
+[
+    {
+        "id": 0,
+        "img": "https://raw.githubusercontent.com/Juanka12/Wisteria/main/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+        "text": "Wisteria"
+    },
+    {
+        "id": 1,
+        "img": "https://raw.githubusercontent.com/Juanka12/ReactRestaurant/main/app/public/logo512.png",
+        "text": "Restaurant"
+    }
+]
