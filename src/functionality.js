@@ -9,9 +9,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 let projectIndex = 0;
-const MAX_PROJECTS = 2;
+const MAX_PROJECTS = 1;
+let projectText = document.getElementById("card-text");
+let projectImg = document.getElementById("card-img");
 
 AddButtonListeners();
+UpdateCurrentProject();
 
 function AddButtonListeners() {
     document.querySelectorAll("div.card-button")[0].addEventListener('click', function () {
@@ -24,8 +27,8 @@ function AddButtonListeners() {
     });
     document.querySelectorAll("div.card-button")[1].addEventListener('click', function () {
         projectIndex++;
-        if (projectIndex > 2) {
-            projectIndex = 2;
+        if (projectIndex > MAX_PROJECTS) {
+            projectIndex = MAX_PROJECTS;
         }
         console.log(projectIndex);
         UpdateCurrentProject();
@@ -33,8 +36,12 @@ function AddButtonListeners() {
 }
 
 function UpdateCurrentProject() {
-    fetch('https://raw.githubusercontent.com/Juanka12/ReactRestaurant/main/app/src/data/shopItems.json')
+    fetch('https://raw.githubusercontent.com/Juanka12/PortfolioWeb/main/src/projects.json')
         .then(response => response.json())
-        .then(data => console.log(data[0]["name"]))
+        .then(data => {
+            projectText.innerHTML = data[projectIndex]["text"];
+            projectImg.src = data[projectIndex]["img"];
+            projectImg.alt = data[projectIndex]["text"];
+        })
         .catch(error => console.log(error));
 }

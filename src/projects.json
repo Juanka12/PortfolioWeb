@@ -2,11 +2,11 @@
     {
         "id": 0,
         "img": "https://raw.githubusercontent.com/Juanka12/Wisteria/main/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
-        "text": "Wisteria"
+        "text": "Wisteria, this is an app for android where you can search for any movie and look into the actors, sinopsis ..., on top of that you can save them into favourites and your friends can look at them."
     },
     {
         "id": 1,
         "img": "https://raw.githubusercontent.com/Juanka12/ReactRestaurant/main/app/public/logo512.png",
-        "text": "Restaurant"
+        "text": "Restaurant, web app for a non-existent restaurant, it has sections to look at the menus, add them to your cart ..."
     }
 ]

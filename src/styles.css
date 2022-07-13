@@ -232,9 +232,10 @@ h2 {
     position: relative;
     display: flex;
     justify-content: center;
-    background-image: url("images/cardbg.png");
+    background-image: url("images/cardbg1.png");
     background-size: cover;
     background-color: #C6C4C6;
+    margin-left: 5vw;
     height: 31vh;
     width: 19vw;
     box-shadow: -40px 40px 0 -3px #141414, -40px 40px white,
@@ -247,17 +248,33 @@ h2 {
     bottom: 0;
     height: 6%;
     width: 100%;
+    border: 1px solid black;
+    background-color: white;
 }
 .card-button {
     height: 100%;
     width: 12%;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    cursor: pointer;
 }
+.card-button > p {
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    margin-top: -30%;
+    padding: 0 0;
+    font-weight: 300;
+    text-shadow: none;
+}   
 .card-img {
     margin: auto;
     height: 50%;
 }
 
 .project-text {
+    width: 50%;
 }
 
 .about-section {
