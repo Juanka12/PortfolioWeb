@@ -20,15 +20,15 @@ section {
     position: absolute;
     background-color: white;
     width: 3px;
-    height: 15%;
+    height: 20vh;
     margin-left: 10%;
 }
 .hline-bot {
     background-color: white;
     width: 3px;
-    height: 35%;
+    height: 40%;
     margin-left: 10%;
-    margin-top: -15%;
+    margin-top: -40vh;
 }
 
 .sections {
@@ -37,6 +37,24 @@ section {
     gap: 3vh;
     margin-bottom: 10vh;
     text-align: end;
+}
+.sections-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.section-backslash {
+    margin-left: 2vw;
+    transition: .8s all;
+}
+.section-title {
+    transition: 1.5s all;
+}
+.sections > div:hover .section-backslash {
+    transform: scaleX(-1) translateX(var(--wi));
+}
+.sections > div:hover .section-title {
+    color: coral;
 }
 
 h1 {
@@ -65,70 +83,6 @@ h2 {
 .hero-text {
     margin-left: 8vw;
     margin-bottom: 200px;
-}
-
-.customButton {
-    width: 200px;
-    height: 50px;
-    background-color: coral;
-    border-radius: 25px;
-    text-align: center;
-    font-size: 30px;
-    font-weight: 500;
-    margin-top: 30px;
-    cursor: pointer;
-    user-select: none;
-    padding-left: 0.9em;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    transition: all 0.2s;
-}
-.customButton span {
-    display: block;
-    margin-left: 0.3em;
-    transition: all 0.3s ease-in-out;
-}
-.customButton svg {
-    display: block;
-    transform-origin: center center;
-    transition: transform 0.3s ease-in-out;
-}
-.customButton:hover .svg-wrapper {
-    animation: fly-1 0.6s ease-in-out infinite alternate;
-}
-@keyframes fly-1 {
-    from {
-        transform: translateY(0.1em);
-    }
-
-    to {
-        transform: translateY(-0.1em);
-    }
-}
-@keyframes fly-2 {
-    from {
-        transform: translateY(0.2rem);
-    }
-
-    to {
-        transform: translateY(-0.2rem);
-    }
-}
-.customButton:hover svg {
-    transform: translateX(2.5em) rotate(45deg) scale(1.1);
-}
-.customButton:hover span {
-    transform: translateX(6em);
-}
-
-.customButton:hover {
-    background-color: #E04D01;
-}
-
-.customButton:active {
-    background-color: #A9A9A9;
-    color: #808080;
 }
 
 .socials {
@@ -168,31 +122,12 @@ h2 {
     height: 150px;
 }
 
-@keyframes hover {
-    from {
-        transform: translate(0px, 0px) scale(1);
-    }
-    to {
-        transform: translate(0px, 0px) scale(1.2);
-    }
-}
-@keyframes hoverout {
-    from {
-        transform: translate(0px, 0px) scale(1.2);
-    }
-    to {
-        transform: translate(0px, 0px) scale(1);
-    }
-}
-
 .skill-logo {
-    animation: hoverout 1s;
-    animation-fill-mode: forwards;
+    transition: 1s all;
 }
 
 .skill-logo:hover{
-    animation: hover 0.6s;
-    animation-fill-mode: forwards;
+    transform: scale(1.2);
 }
 .skill-logo:hover .tooltip {
     opacity: 1;
@@ -258,6 +193,24 @@ h2 {
     border-left: 1px solid black;
     border-bottom: 1px solid black;
     cursor: pointer;
+    user-select: none;
+    animation: pulsating 5s infinite;
+}
+@keyframes pulsating {
+    0%, 100% {
+        background-color: white;
+    }
+    50% {
+        background-color: rgb(194, 194, 194);
+    }
+}
+@keyframes moving {
+    0%, 100% {
+        transform: translateX(30%);
+    }
+    50% {
+        transform: translateX(-30%);
+    }
 }
 .card-button > p {
     color: black;
@@ -267,6 +220,7 @@ h2 {
     padding: 0 0;
     font-weight: 300;
     text-shadow: none;
+    animation: moving 5s infinite;
 }   
 .card-img {
     margin: auto;
@@ -275,6 +229,31 @@ h2 {
 
 .project-text {
     width: 50%;
+}
+
+.card-link {
+    margin-left: 3vw;
+    color: rgb(194,194,194);
+    text-shadow: none;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width:1000px) {
+    .project-container {
+        flex-direction: column;
+        gap: 8vh;
+    }
+    .project-card {
+        width: 35vh;
+        height: 60vw;
+        margin-left: 15vw;
+    }
+    .project-text {
+        margin-left: 15vw;
+    }
+    .card-button > p {
+        margin-top: 0;
+    }
 }
 
 .about-section {
@@ -303,7 +282,7 @@ p {
 .lline {
     background-color: white;
     height: 3px;
-    width: 8vw;
+    width: calc(-6vh + 23.6vw);
 }
 .rline {
     background-color: white;
@@ -314,11 +293,4 @@ p {
 a {
     text-decoration: none;
     color: white;
-}
-
-@media only screen and (max-width:1000px) {
-    .project-grid {
-        display: flex;
-        flex-wrap: wrap;
-    }
 }

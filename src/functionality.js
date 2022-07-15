@@ -12,6 +12,7 @@ let projectIndex = 0;
 const MAX_PROJECTS = 1;
 let projectText = document.getElementById("card-text");
 let projectImg = document.getElementById("card-img");
+let projectLink = document.getElementById("card-link");
 
 AddButtonListeners();
 UpdateCurrentProject();
@@ -42,6 +43,7 @@ function UpdateCurrentProject() {
             projectText.innerHTML = data[projectIndex]["text"];
             projectImg.src = data[projectIndex]["img"];
             projectImg.alt = data[projectIndex]["text"];
+            projectLink.href = data[projectIndex]["link"];
         })
         .catch(error => console.log(error));
 }
