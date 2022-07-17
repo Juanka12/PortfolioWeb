@@ -17,7 +17,7 @@ window.addEventListener("scroll", function () {
 });
 
 let projectIndex = 0;
-const MAX_PROJECTS = 1;
+const MAX_PROJECTS = 2;
 let projectText = document.getElementById("card-text");
 let projectImg = document.getElementById("card-img");
 let projectLink = document.getElementById("card-link");
