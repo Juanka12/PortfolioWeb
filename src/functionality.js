@@ -8,6 +8,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+window.addEventListener("scroll", function () {
+    if (window.scrollY >= 400) {
+        this.document.getElementById("button-up").className = "button-up";
+    }else {
+        this.document.getElementById("button-up").className = "button-up hide";
+    }
+});
+
 let projectIndex = 0;
 const MAX_PROJECTS = 1;
 let projectText = document.getElementById("card-text");
