@@ -1,18 +1,21 @@
 [
     {
         "id": 0,
+        "name": "Wisteria",
         "img": "https://raw.githubusercontent.com/Juanka12/Wisteria/main/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
         "text": "Wisteria is an app for android where you can search for any movie and look into the actors, sinopsis ..., on top of that you can save them into favourites and your friends can look at them.",
         "link": "https://github.com/Juanka12/Wisteria"
     },
     {
         "id": 1,
+        "name": "Restaurant",
         "img": "https://raw.githubusercontent.com/Juanka12/ReactRestaurant/main/app/public/logo512.png",
         "text": "Restaurant, web app for a non-existent restaurant, it has sections to look at the menus, add them to your cart ...",
         "link": "https://github.com/Juanka12/ReactRestaurant"
     },
     {
         "id": 2,
+        "name": "Java",
         "img": "https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/121px-Java_programming_language_logo.svg.png",
         "text": "I have some CRUD projects, where I use java to connect to MySQL.",
         "link": "https://github.com/Juanka12/Store2021"
