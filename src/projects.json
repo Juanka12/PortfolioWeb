@@ -19,5 +19,12 @@
         "img": "https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/121px-Java_programming_language_logo.svg.png",
         "text": "I have some CRUD projects, where I use java to connect to MySQL.",
         "link": "https://github.com/Juanka12/Store2021"
+    },
+    {
+        "id": 3,
+        "name": "Unity",
+        "img": "https://avatars.githubusercontent.com/u/1326761?s=200&v=4",
+        "text": "With Unity as a Graphic Engine I made from scratch a system to paint and render any kind of vegetation, highly customizable, height variation, wind simulation and much more...",
+        "link": ""
     }
 ]

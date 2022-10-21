@@ -307,7 +307,7 @@ a {
     transition: 0.6s all;
 }
 .hide {
-    opacity: 0;
+    visibility: hidden;
 }
 .button-up:hover {
     background-color: rgba(255, 255, 255, 0.4);
@@ -326,5 +326,96 @@ a {
     }
     .about-bottom {
         margin-top: -26vh;
+    }
+}
+
+.details-page {
+    position: absolute;
+    top: 140vh;
+    left: 11.4vw;
+    background-color: #a3a3a3;
+    height: 31vh;
+    width: 19vw;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.6s all;
+    user-select: none;
+}
+.active {
+    visibility: visible;
+    opacity: 1;
+    top: 100vh;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: 2s all ease;
+}
+.details-close {
+    width: 4%;
+    height: 8%;
+    margin-left: 1.5vw;
+    margin-top: 2vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.details-close svg {
+    width: 100%;
+}
+.details-cont {
+    margin-top: -5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.details-media {
+    margin-top: 6vh;
+    height: 70%;
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+}
+.details-logo {
+    margin-top: 2%;
+    width: 8%;
+}
+.media-main {
+    height: 100%;
+}
+.media-button {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.media-video {
+    position: absolute;
+    height: 70%;
+    width: 70%;
+}
+@media only screen and (orientation: portrait) {
+    .media-main {
+        width: 80%;
+        height: fit-content;
+    }
+    .details-logo {
+        margin-top: 10%;
+        width: 20%;
+    }
+    .details-media {
+        margin-top: 15vh;
+    }
+    .media-button {
+        height: 20%;
+        width: 5%;
+        margin-top: 8%;
+    }
+    .details-close {
+        height: 2%;
+    }
+    .media-video {
+        height: 20%;
     }
 }
